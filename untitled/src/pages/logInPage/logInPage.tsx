@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import TextWriter from '../../components/textWriter/textWriter';
-import './styles.css';
-function HomePage() {
+
+function LogInPage() {
 
 
     return(
-        <div key={0}>
-            <TextWriter key={0} text='S S S'/>
+        <div >
+
         </div>
     );
 };
-export default HomePage;
+export default LogInPage;

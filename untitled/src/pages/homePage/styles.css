@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.7);
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 30px;
+    width: 650px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.container-child {
+    border: 2px solid black;  
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+.green {
+  color: green;
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.underline {
+  border-bottom: 1px solid #000;
+}

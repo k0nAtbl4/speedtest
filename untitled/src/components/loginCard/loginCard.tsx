@@ -37,21 +37,22 @@ function LoginCard(props: LoginCardProps) {
     }
 
     return (
-    <div className='login_form'>
+        <div className='login_form'>
 
 
-        {/* <label htmlFor="username"> Username</label> */}
-        <input className='username' value={username} type='username' id="username" placeholder="username2004" name="username" onChange={handleSubmitUsername} />
+            {/* <label htmlFor="username"> Username</label> */}
+            <input className='username' value={username} type='username' id="username" placeholder="username2004" name="username" onChange={handleSubmitUsername} />
 
 
-        {/* <label htmlFor="password"> Password</label> */}
-        <input className='password' value={password} type='password' id="password" placeholder="password" name="password" onChange={handleSubmitPassword} />
+            {/* <label htmlFor="password"> Password</label> */}
+            <input className='password' value={password} type='password' id="password" placeholder="password" name="password" onChange={handleSubmitPassword} />
 
 
-        <button className='login_button' onClick={() => {
-            registerUser( {username: username, password: password})
-        }}>{props.log}</button>
-    </div>
+            <div className='login_button' onClick={() => {
+
+                registerUser({ username: username, password: password })
+            }}>{props.log}</div>
+        </div>
     )
 }
 

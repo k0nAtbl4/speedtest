@@ -5,17 +5,20 @@
 
 .green-char {
   border: 0;
-  color: green
+  color: green;
+  margin: auto;
 }
 
 .gray-char {
+  margin: auto;
   border: 0;
   color: gray;
 }
 
 .red-char {
+  margin: auto;
   border: 0;
-  color: red
+  color: red;
 }
 .focusClick{
   font-size: xx-large;  

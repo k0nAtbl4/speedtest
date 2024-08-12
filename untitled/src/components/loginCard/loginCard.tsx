@@ -1,32 +1,58 @@
 
 import { FC, useState } from 'react';
-import './levelsCard.css'
+import './loginCard.css';
 import cn from 'classnames';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+type LoginCardProps = {
+    log: string
+}
 
 
-function Navbar() {
-    const [email, SetEmail] = useState("");
+function LoginCard(props: LoginCardProps) {
+    const [username, SetUsername] = useState("");
     const [password, SetPassword] = useState("");
 
-
-    const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
-       //todo
+    const handleSubmitUsername = (e: React.ChangeEvent<HTMLInputElement>) => {
+        SetUsername(e.target.value)
+    }
+    const handleSubmitPassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+        SetPassword(e.target.value)
     }
 
 
-    <form>
+    type UserRequest = {
+        username: string,
+        password: string,
+    }
+    const registerUser = async (userData: UserRequest) => {
+        try {
+            const response = await axios.post('http://localhost:8000/login', userData);
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    return (
+    <div className='login_form'>
 
 
-        <label htmlFor="email"> Email</label>
-        <input value={email} type='email' id="email" placeholder="example@gmail.com" name="email" />
+        {/* <label htmlFor="username"> Username</label> */}
+        <input className='username' value={username} type='username' id="username" placeholder="username2004" name="username" onChange={handleSubmitUsername} />
 
 
-        <label htmlFor="password"> Email</label>
-        <input value={password} type='password' id="password" placeholder="example@gmail.com" name="password" onChange={() => { handleSubmit }} />
+        {/* <label htmlFor="password"> Password</label> */}
+        <input className='password' value={password} type='password' id="password" placeholder="password" name="password" onChange={handleSubmitPassword} />
 
 
-        <button>Login</button>
-    </form>
+        <button className='login_button' onClick={() => {
+            registerUser( {username: username, password: password})
+        }}>{props.log}</button>
+    </div>
+    )
 }
+
+export default LoginCard;

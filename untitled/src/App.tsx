@@ -22,8 +22,8 @@ function App() {
         <Route path="/comp" element={<CompPage />} />
         <Route path="/top" element={<TopPage />} />
         <Route path="/training" element={<TrainingPage />} />
-        <Route path="/training/:level" element={<TrainingLevelPage level={Number(levelss)}/>} />
-        <Route path="/login" element={<LogInPage/>} />
+        <Route path="/training/:level" element={<TrainingLevelPage level={Number(levelss)} />} />
+        <Route path="/login" element={<LogInPage />} />
       </Routes>
     </Router>
 

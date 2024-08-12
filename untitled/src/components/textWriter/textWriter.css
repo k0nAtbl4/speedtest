@@ -23,7 +23,7 @@
 .inputTextToWrite {
   /* display: none; */
   opacity: 0;
-  /* color: white;
+  /* color: white;vvvvvvvvvvv
   font-size: xx-large;
   border: none;
   background-color: transparent;
@@ -120,3 +120,5 @@
   text-align: center;
   line-height: 32px;
 }
+
+

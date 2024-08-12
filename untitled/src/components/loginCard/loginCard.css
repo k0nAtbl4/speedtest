@@ -1,0 +1,30 @@
+.a{
+    
+}
+.username{
+    width: auto;
+    padding: 1%;
+    font-size: large;
+    border-radius: 10px;
+}
+.password{
+    border-radius: 10px;
+    font-size: large;
+    width: auto;
+    padding: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.login_form{
+    padding: 10%;
+    padding-left: 35%;
+    padding-right: 35%;
+display: flex;
+flex-direction: column;
+}
+.login_button{
+    width: auto;
+    margin-inline: 25%;
+    margin-top: 2%;
+    font-size: x-large;
+}
